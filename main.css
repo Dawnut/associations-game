@@ -1,21 +1,21 @@
 .center, body {
     margin: auto;
     width: 70%;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
 input {
-    font-size: 2em;
+    font-size: 4vmax;
     padding: 0px;
-    height: 15px;
     display: inline-block;
     border: 0px;
-    border-bottom: 2px solid #2b69dd;
-    text-align: left;
     outline: none;
-    
-    
+    border-bottom: 2px solid #2b69dd00;    
+}
+
+input:focus {
+    border-bottom: 2px solid #2b69dd;    
 }
 
 h3 {
@@ -27,8 +27,13 @@ h3 {
     border-radius: 10px;
     background-color: #2b69dd;
     color: white;
-    font-size: 2em;
+    font-size: 3vmax;
     cursor: pointer;
+    padding: 3vh;
+}
+
+#counter, #teams, #round {
+font-size: 3vmax;
 }
 
 #word {
