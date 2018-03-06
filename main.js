@@ -1,37 +1,37 @@
-var words = [];
-var wordcount = 0;
-var form = $('form');
-var box = $('#box');
-var word = $('#word');
-var counter = $('#counter');
-var start = $('#start');
-var round = 0;
+const form = $("form");
+const box = $("#box");
+const word = $("#word");
+const counter = $("#counter");
+const start = $("#start");
+let words = [];
+let wordcount = 0;
+let round = 0;
 
 form.keydown(event => {
   if (event.keyCode == 13) box.submit();
-})
+});
 
 box.submit(еvent => {
   event.preventDefault();
   if (!box.val()) return;
   words.push(box.val());
   wordcount++;
-  counter.text(wordcount + ' Words');
-  box.val('').focus();
-})
+  counter.text(wordcount + " Words");
+  box.val("").focus();
+});
 
 start.click(x => {
-  start.css('visibility', 'hidden');
-  word.css('visibility', 'visible');
-})
-
+  start.css("visibility", "hidden");
+  word.css("visibility", "visible");
+});
 
 function shuffle(array) {
-  var currentIndex = words.length, temporaryValue, randomIndex;
+  var currentIndex = words.length,
+    temporaryValue,
+    randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
